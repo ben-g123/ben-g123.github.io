@@ -2,6 +2,9 @@
 <body>
 <big><button onclick="myFunction()">Click Here To Finish Login To Bugs+</button></big>
 </body>
+<div id="textField" style="display: none;">
+  <big>Login finished. Please return to Bugs+ and press the I've Logged In button.</big>
+</div>
 <script>
 const id = window.location.hash.slice(1);
 
@@ -18,5 +21,8 @@ function myFunction() {
 
   // Alert the copied text
   alert("Copied the text: " + copyText.value);
+
+  var text = document.getElementById("textField");
+  text.style.display = "block";
 }</script>
 </html>
