@@ -13,10 +13,10 @@ function myFunction() {
   var copyText = `${id}`
 
    // Copy the text inside the text field
-  navigator.clipboard.writeText(id.value);
+  navigator.clipboard.writeText(`${id}`);
 
   // Alert the copied text
-  alert("Copied the text: " + id.value);
+  alert("Copied the text");
 
   var text = document.getElementById("textField");
   text.style.display = "block";
