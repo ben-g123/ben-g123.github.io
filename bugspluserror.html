@@ -4,11 +4,12 @@
 </head>
 <body>
 <big>An Error Occured</big>
-<div id="textField" style="display: none;">
+<div id="error" style="display: none;">
   <big>Loading error details...</big>
 </div>
 </body>
 <script>
 const error = urlParams.get('error')
-document.getElementById("p1").innerHTML = `${error}`;</script>
+document.getElementById("error").innerHTML = `${error}`;
+</script>
 </html>
