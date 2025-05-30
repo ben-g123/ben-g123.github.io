@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Error Page</title>
+</head>
+<body>
+<big>An Error Occured</big>
+<div id="textField" style="display: none;">
+  <big>Loading error details...</big>
+</div>
+</body>
+<script>
+const error = urlParams.get('error')
+document.getElementById("p1").innerHTML = `${error}`;</script>
+</html>
