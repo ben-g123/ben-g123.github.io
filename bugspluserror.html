@@ -9,7 +9,8 @@
 </div>
 </body>
 <script>
+const urlParams = new URLSearchParams(queryString);
 const error = urlParams.get('error')
-document.getElementById("errorText").innerHTML = "${error}";
+document.getElementById("errorText").innerHTML = `${error}`;
 </script>
 </html>
