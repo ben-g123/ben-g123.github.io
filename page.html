@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Bugs+</title>
+</head>
+<body>
+<div id="embedScreen">
+</div>
+</body>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const p = urlParams.get('p')
+document.getElementById("embedScreen").innerHTML = `<iframe src="https://sitesbyben.wixsite.com/bugsplus/${p}" width="100%" height="100%" frameBorder="0" style="border:none;"></iframe>`;
+</script>
+</html>
