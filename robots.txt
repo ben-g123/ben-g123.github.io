@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /bugspluserror.html
+Disallow: /login.html
+Disallow: /pin-reset-login.html
+Disallow: /test.html
