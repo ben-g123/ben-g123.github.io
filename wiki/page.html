@@ -1,7 +1,12 @@
 <html>
 <script>
+ function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+await delay(2000); // Wait for 2 seconds
 const urlParams = new URLSearchParams(window.location.search);
 const page = urlParams.get('wp'); // Replace 'yourParamName'
+await delay(10); // Wait for 10ms
 window.location.replace(`http://wiki.bugsplus.me/${page}`);
 </script>
 </html>
