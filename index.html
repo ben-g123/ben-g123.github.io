@@ -3,18 +3,7 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9BE6CJM8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HV9BE6CJM8');
-</script>
-<title>Bugs+</title>
-<link rel="icon" type="image/x-icon" href="img/bugspluslogo.png">
-<meta name="keywords" content="bug catching, learning, educational, bugs, insects, moths, spiders, trading cards, trading, quizzes, bug quizzes, learn about insects, learn about bugs">
-<meta name="description" content="Bugs+ is an educational online game where you will learn about bugs and you will get bug-related trading cards!">
-<meta name="author" content="Bugs+ Team">
-<link rel="stylesheet" id="silktide-consent-manager-css" href="cookie-banner/silktide-consent-manager.css">
+  <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie-banner/silktide-consent-manager.css">
 <script src="cookie-banner/silktide-consent-manager.js"></script>
 <script>
 silktideCookieBannerManager.updateCookieBannerConfig({
@@ -73,6 +62,35 @@ silktideCookieBannerManager.updateCookieBannerConfig({
   }
 });
 </script>
+    // Initialize the dataLayer
+  window.dataLayer = window.dataLayer || [];
+
+  // Create the gtag function that pushes to the dataLayer
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  // Set consent defaults
+  gtag('consent', 'default', {
+    analytics_storage: localStorage.getItem('silktideCookieChoice_analytics') === 'true' ? 'granted' : 'denied',
+    ad_storage: localStorage.getItem('silktideCookieChoice_marketing') === 'true' ? 'granted' : 'denied',
+    ad_user_data: localStorage.getItem('silktideCookieChoice_marketing') === 'true' ? 'granted' : 'denied',
+    ad_personalization: localStorage.getItem('silktideCookieChoice_marketing') === 'true' ? 'granted' : 'denied',
+    functionality_storage: localStorage.getItem('silktideCookieChoice_necessary') === 'true' ? 'granted' : 'denied',
+    security_storage: localStorage.getItem('silktideCookieChoice_necessary') === 'true' ? 'granted' : 'denied'
+  });
+  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HV9BE6CJM8');
+</script>
+<title>Bugs+</title>
+<link rel="icon" type="image/x-icon" href="img/bugspluslogo.png">
+<meta name="keywords" content="bug catching, learning, educational, bugs, insects, moths, spiders, trading cards, trading, quizzes, bug quizzes, learn about insects, learn about bugs">
+<meta name="description" content="Bugs+ is an educational online game where you will learn about bugs and you will get bug-related trading cards!">
+<meta name="author" content="Bugs+ Team">
 </head>
 <body>
 <iframe src="https://sitesbyben.wixsite.com/bugsplus" width="100%" height="100%" frameBorder="0" style="border:none;"></iframe>
