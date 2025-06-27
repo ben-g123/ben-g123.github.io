@@ -23,11 +23,17 @@
   <style></style>
 </head>
 <body>
-  <div id="banner-ad" style="width: 300px; height: 250px"></div>
+  <div id="static-ad-1" style="width: 100px; height: 100px"></div>
+  <!-- <div id="banner-ad" style="width: 300px; height: 250px"></div> -->
   <script>
     googletag.cmd.push(() => {
       // Request and render an ad for the "banner-ad" slot.
       googletag.display("banner-ad");
     });
+    // Define static ad slots.
+        googletag
+          .defineSlot("/6355419/Travel/Europe", [100, 100], "static-ad-1")
+          .addService(googletag.pubads());
+
   </script>
 </body>
