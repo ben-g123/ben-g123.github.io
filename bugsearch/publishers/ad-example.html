@@ -2,15 +2,14 @@
 <head>
   <meta charset="utf-8">
   <title>Hello GPT</title>
-  <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous" async></script>
-  <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-      googletag
-          .defineSlot("https://placehold.co/200x200?text=Banner+Ad\nExample\n200x200", [200, 200], "div-id")
-          .addService(googletag.pubads());
-      googletag.enableServices();
-    });
-  </script>
+<script type="text/javascript">
+  var total_images = 3;
+  var random_number = Math.floor((Math.random()*total_images));
+  var random_img = new Array();
+  random_img[0] = '<a href="http://google.com"><img src="http://domain.com/images/ad1.gif"></a>';
+  random_img[1] = '<a href="http://google.com"><img src="http://domain.com/images/ad2.gif"></a>';
+  random_img[2] = '<a href="http://google.com"><img src="http://domain.com/images/ad3.gif"></a>';
+  document.write(random_img[random_number]);
+</script>
 </head>
 </html>
