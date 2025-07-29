@@ -15,14 +15,25 @@
 <h1>Thanks!</h1>
 </br>
 We have confirmed that you allowed your child to use Bugs+. Please enter the following code on your child's device:
-<div id="errorText">
+<big><big><div id="errorText"></big></big>
 <script src='https://cdn.jotfor.ms/agent/embedjs/0197ca0b31f778048356d99117b2479c266c/embed.js?skipWelcome=1&maximizable=1'></script>
 </div>
 </body>
 <script>
+function getRandomInt(min, max) {
+  min = Math.ceil(min); // Ensure min is an integer
+  max = Math.floor(max); // Ensure max is an integer
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const randomInteger = getRandomInt(100000, 9999999);
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const error = urlParams.get('status')
-document.getElementById("errorText").innerHTML = `${error}`;
+
+if (status !== "") {
+        document.getElementById("errorText").innerHTML = `${randomInteger}`;
+    }
 </script>
 </html>
