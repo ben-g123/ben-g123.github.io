@@ -32,8 +32,10 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const error = urlParams.get('status')
 
-if (status !== "") {
+if (error !== "") {
         document.getElementById("errorText").innerHTML = `${randomInteger}`;
+} else {
+          document.getElementById("errorText").innerHTML = `Oops! The verification process failed. Please try again or contact support.`;
     }
 </script>
 </html>
