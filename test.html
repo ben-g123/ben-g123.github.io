@@ -1,0 +1,15 @@
+<html>
+<script>
+import Cookies from 'js-cookie';
+
+const cookieData = {
+  isLoggedIn: true,
+  isBetaUser: false,
+};
+
+Cookies.set('gitbook-visitor-public', JSON.stringify(cookieData), {
+  secure: true,
+  domain: '*.bugsplus.me',
+})
+</script>
+</html>
