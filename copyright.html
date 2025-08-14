@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="© 2025 Ben. All rights reserved. Bugs+ - bugsplus.me">
+    <title>Copyright Certificate - Bugs+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        .certificate-border {
+            background: linear-gradient(45deg, #1e40af, #3b82f6, #60a5fa, #93c5fd);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .seal-animation {
+            animation: sealPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes sealPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .verified-badge {
+            animation: verifiedGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes verifiedGlow {
+            from { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+            to { box-shadow: 0 0 30px rgba(34, 197, 94, 0.6); }
+        }
+        
+        .interactive-hover:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 280px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-center;
+            border-radius: 8px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-100 to-blue-50 p-4 flex items-center justify-center">
+    <div class="certificate-border p-2 rounded-2xl shadow-2xl max-w-4xl w-full">
+        <div class="bg-white rounded-xl p-12 relative overflow-hidden">
+            <!-- Decorative corner elements -->
+            <div class="absolute top-0 left-0 w-32 h-32 opacity-10">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-blue-600">
+                    <path d="M0,0 L50,0 L0,50 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute top-0 right-0 w-32 h-32 opacity-10 rotate-90">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-blue-600">
+                    <path d="M0,0 L50,0 L0,50 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 opacity-10 -rotate-90">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-blue-600">
+                    <path d="M0,0 L50,0 L0,50 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-0 right-0 w-32 h-32 opacity-10 rotate-180">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-blue-600">
+                    <path d="M0,0 L50,0 L0,50 Z" fill="currentColor"/>
+                </svg>
+            </div>
+
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h1 class="text-5xl font-bold text-gray-800 mb-2" style="font-family: 'Playfair Display', serif;">CERTIFICATE OF COPYRIGHT</h1>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Verified Badge -->
+            <div class="flex justify-center mb-8">
+                <div class="verified-badge bg-green-500 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 interactive-hover cursor-pointer tooltip">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    HTML META TAG VERIFIED
+                    <span class="tooltip-text">This certificate has been verified through HTML meta tag validation. The copyright information is embedded in the website's source code and matches our registry records.</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="text-center mb-12">
+                <p class="text-xl text-gray-700 mb-8" style="font-family: 'Inter', sans-serif;">
+                    This is to certify that the intellectual property
+                </p>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8 border-2 border-blue-200">
+                    <h2 class="text-6xl font-bold text-blue-800 mb-4" style="font-family: 'Playfair Display', serif;">Bugs+</h2>
+                    <p class="text-2xl text-gray-700">has been registered for copyright protection</p>
+                </div>
+
+                <p class="text-xl text-gray-700 mb-8">
+                    with <strong>ALL RIGHTS RESERVED</strong>
+                </p>
+            </div>
+
+            <!-- Details Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="space-y-6">
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">COPYRIGHT OWNER</h3>
+                            <p class="text-2xl font-bold text-blue-800 mb-2">Ben</p>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Legal Entity:</strong> Individual Creator</p>
+                                <p><strong>Jurisdiction:</strong> International</p>
+                                <p><strong>Owner Type:</strong> Original Author</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-green-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">COPYRIGHT STATUS</h3>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <p class="text-2xl font-bold text-green-700">ACTIVE</p>
+                            </div>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Protection Level:</strong> Full Rights Reserved</p>
+                                <p><strong>Enforcement:</strong> Globally Protected</p>
+                                <p><strong>Last Verified:</strong> 1 August 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">REGISTRATION CODE</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <p class="text-xl font-bold text-orange-800 font-mono">CR-7X9K-M4P2-8N5Q-W1L6</p>
+                                <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1 tooltip">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    VALID
+                                    <span class="tooltip-text">This registration code is currently active and valid. It was generated on August 1, 2025 and is linked to the verified copyright owner Ben.</span>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Code Type:</strong> Digital Asset Registration</p>
+                                <p><strong>Verification Method:</strong> HTML Meta Tag</p>
+                                <p><strong>Registry Database:</strong> CC-GLOBAL-2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-teal-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">WORK CLASSIFICATION</h3>
+                            <p class="text-xl font-bold text-teal-800 mb-2">Digital Software/Application</p>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Category:</strong> Computer Software</p>
+                                <p><strong>Medium:</strong> Web Application</p>
+                                <p><strong>Nature:</strong> Interactive Digital Tool</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-purple-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">DECLARATION DATE</h3>
+                            <p class="text-2xl font-bold text-purple-800 mb-2">1 August 2025</p>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Time:</strong> 14:32:17 UTC</p>
+                                <p><strong>Filing Method:</strong> Digital Submission</p>
+                                <p><strong>Processing Time:</strong> Instant Verification</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">OFFICIAL WEBSITE</h3>
+                            <p class="text-2xl font-bold text-indigo-800 mb-2">bugsplus.me</p>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Domain Status:</strong> Active & Verified</p>
+                                <p><strong>SSL Certificate:</strong> Valid</p>
+                                <p><strong>Meta Tag Status:</strong> Embedded & Verified</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">EXPIRY DATE</h3>
+                            <p class="text-2xl font-bold text-yellow-800 mb-2">1 August 2026</p>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Renewal Period:</strong> 30 days before expiry</p>
+                                <p><strong>Grace Period:</strong> 90 days post-expiry</p>
+                                <p><strong>Auto-Renewal:</strong> Not Enabled</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-hover cursor-pointer">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-rose-500">
+                            <h3 class="font-semibold text-gray-800 mb-2">PROTECTION SCOPE</h3>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><strong>Geographical:</strong> Worldwide</p>
+                                <p><strong>Usage Rights:</strong> Exclusive to Owner</p>
+                                <p><strong>Commercial Use:</strong> Protected</p>
+                                <p><strong>Derivative Works:</strong> Restricted</p>
+                                <p><strong>Distribution:</strong> Owner Authorization Required</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Details Section -->
+            <div class="bg-gradient-to-r from-slate-50 to-gray-50 p-8 rounded-xl mb-8 border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Certificate Details & Legal Information</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Registration Fee</h4>
+                        <p class="text-sm text-gray-600">$0.00 (Promotional)</p>
+                        <p class="text-xs text-gray-500">Standard: $25.0</p>
+                        <p class="text-xs text-gray-500">Copyright Registeration Balance: <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1 tooltip">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    $50.0
+                                    <span class="tooltip-text">The copyright owner currently has $50.0 pre-loaded credits for copyright registeration.</span>
+                                </div></p>
+                      
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Backup Status</h4>
+                        <p class="text-sm text-gray-600">Secured & Archived</p>
+                        <p class="text-xs text-gray-500">Multiple Redundancies</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-4 4-4-4 4-4 .257-.257A6 6 0 1118 8zm-6-2a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Legal Standing</h4>
+                        <p class="text-sm text-gray-600">Good</p>
+                        <p class="text-xs text-gray-500">Has the rights to punish copyright infringements</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Official Seal -->
+            <div class="flex justify-center mb-8">
+                <div class="seal-animation interactive-hover cursor-pointer tooltip">
+                    <div class="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 mx-auto mb-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div class="text-xs font-bold">OFFICIAL</div>
+                        </div>
+                    </div>
+                    <span class="tooltip-text">This official seal certifies that this copyright certificate has been issued and authenticated by Copyright Center, confirming its validity and legal standing.</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-gray-600 border-t pt-6">
+                <p class="mb-2">This certificate confirms the copyright registration and protection status</p>
+                <p class="text-sm">Certificate ID: BG-2025-080001</p>
+                <p class="text-xs mt-1">Verified with HTML Meta Tag | Issued by Copyright Center</p>
+                <div class="mt-4 flex justify-center gap-4">
+                    <button onclick="printCertificate()" class="interactive-hover bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg">
+                        🖨️ Print Certificate
+                    </button>
+                    <a href="mailto:bugsplusbyben+copyright@gmail.com?subject=Copyright%20Infringement%20Report%20-%20Bugs%2B&body=Dear%20Copyright%20Owner%2C%0A%0AI%20am%20reporting%20a%20potential%20copyright%20infringement%20regarding%20Bugs%2B%20(Registration%20Code%3A%20CR-7X9K-M4P2-8N5Q-W1L6).%0A%0ADetails%20of%20infringement%3A%0A%0AThank%20you." class="interactive-hover bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg flex items-center gap-2">
+                        ⚠️ Report Infringement
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function printCertificate() {
+            window.print();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.interactive-hover').forEach(element => {
+                element.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f424ce50f3e6db',t:'MTc1NTIxMzIxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
