@@ -97,10 +97,11 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 <div id="errorText"></div>
 </body>
 <div id="textField" style="display: none;">
-  <big>Login finished. Please return to Bugs+ and press the I've Logged In button.</big>
+  <big>Login finished. Please return to Bugs+ and press the I've Logged In button, and copy and paste the text we put in your clipboard.</big>
 </div>
 <script src='https://cdn.jotfor.ms/agent/embedjs/0197ca0b31f778048356d99117b2479c266c/embed.js?skipWelcome=1&maximizable=1'></script>
 <script>
+document.getElementById("errorText").innerHTML = `Button not working? Copy and paste this into Bugs+ instead: ${id}`;
 
 function myFunction() {
   // Get the text field
@@ -109,9 +110,6 @@ function myFunction() {
 
    // Copy the text inside the text field
   navigator.clipboard.writeText(id);
-
-document.getElementById("errorText").innerHTML = `Button not working? Copy and paste this instead: ${id}`;
-
 
   // Alert the copied text
   alert("Login finished, please return to Bugs+ and press the I've Logged In button.");
