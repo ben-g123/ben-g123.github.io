@@ -101,6 +101,8 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 </div>
 <script src='https://cdn.jotfor.ms/agent/embedjs/0197ca0b31f778048356d99117b2479c266c/embed.js?skipWelcome=1&maximizable=1'></script>
 <script>
+  var id = window.location.hash.slice(1);
+  var copyText = `${id}`
 document.getElementById("errorTexts").innerHTML = `Button not working? Copy and paste this into Bugs+ instead: ${id}`;
 
 function myFunction() {
