@@ -95,7 +95,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 <big>Just One More Thing...</big>
 <big><button onclick="myFunction()">Click Here To Finish Login To Bugs+</button></big>
 </body>
-  <div id="errorText">
+  <div id="errorText"></div>
 <div id="textField" style="display: none;">
   <big>Login finished. Please return to Bugs+ and press the I've Logged In button.</big>
 </div>
@@ -110,7 +110,6 @@ function myFunction() {
    // Copy the text inside the text field
   navigator.clipboard.writeText(id);
 
-const error = urlParams.get('error')
 document.getElementById("errorText").innerHTML = `Button not working? Copy and pastee this instead: ${id}`;
 
 
