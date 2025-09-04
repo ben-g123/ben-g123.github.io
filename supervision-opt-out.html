@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .step-indicator {
+            transition: all 0.3s ease;
+        }
+        .step-active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .step-completed {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .page-transition {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Progress Bar -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-4">
+                    <div id="step1-indicator" class="step-indicator step-active w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                    <div class="w-16 h-1 bg-gray-300 rounded"></div>
+                    <div id="step2-indicator" class="step-indicator w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">2</div>
+                    <div class="w-16 h-1 bg-gray-300 rounded"></div>
+                    <div id="step3-indicator" class="step-indicator w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">3</div>
+                    <div class="w-16 h-1 bg-gray-300 rounded"></div>
+                    <div id="step4-indicator" class="step-indicator w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">4</div>
+                    <div class="w-16 h-1 bg-gray-300 rounded"></div>
+                    <div id="step5-indicator" class="step-indicator w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">5</div>
+                </div>
+            </div>
+            <div class="text-sm text-gray-600">
+                Step <span id="current-step">1</span> of 5
+            </div>
+        </div>
+
+        <!-- Step 1: Introduction -->
+        <div id="step1" class="page-transition bg-white rounded-xl shadow-lg p-8">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to Our Tool</h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    This is a multi-step template that can be customized for any purpose. It demonstrates modern UI patterns with smooth transitions and a professional design.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 text-left">
+                    <h3 class="font-semibold text-blue-800 mb-2">What this tool does:</h3>
+                    <ul class="text-blue-700 space-y-1">
+                        <li>• Guides users through a multi-step process</li>
+                        <li>• Collects information progressively</li>
+                        <li>• Provides clear feedback and confirmation</li>
+                        <li>• Ensures users understand each step</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: User Input -->
+        <div id="step2" class="page-transition bg-white rounded-xl shadow-lg p-8 hidden">
+            <div class="max-w-md mx-auto">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Enter Your Information</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">User ID</label>
+                        <input type="text" id="userid" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter your user ID">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email (Optional)</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <p class="text-sm text-yellow-800">
+                        <strong>Note:</strong> This information is used to customize your experience and is not stored permanently.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Information -->
+        <div id="step3" class="page-transition bg-white rounded-xl shadow-lg p-8 hidden">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Important Information</h2>
+                <div class="prose prose-lg mx-auto">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Understanding the Process</h3>
+                        <p class="text-gray-700 mb-4">
+                            This step typically explains important concepts or terms that users need to understand before proceeding. It ensures informed consent and proper understanding.
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Transparency:</strong> All processes are clearly explained</li>
+                            <li>• <strong>User Control:</strong> You maintain full control over your decisions</li>
+                            <li>• <strong>Reversibility:</strong> Most actions can be undone if needed</li>
+                            <li>• <strong>Support:</strong> Help is available throughout the process</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div id="step4" class="page-transition bg-white rounded-xl shadow-lg p-8 hidden">
+            <div class="max-w-md mx-auto text-center">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Confirmation Required</h2>
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+                    <p class="text-yellow-800 mb-4">
+                        <strong>Important Notice:</strong> Proceeding with this action will result in a temporary restriction on your account for 24 hours as a security measure.
+                    </p>
+                    <p class="text-sm text-yellow-700">
+                        This is a standard security protocol to ensure account safety and prevent unauthorized changes.
+                    </p>
+                </div>
+                <div class="flex items-center justify-center space-x-3 mb-6">
+                    <input type="checkbox" id="confirm-checkbox" class="w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-500">
+                    <label for="confirm-checkbox" class="text-gray-700">
+                        I understand and agree to proceed with the temporary restriction
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Completion -->
+        <div id="step5" class="page-transition bg-white rounded-xl shadow-lg p-8 hidden">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Process Complete!</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    The requested changes have been successfully processed. You should see the updates reflected in your account shortly.
+                </p>
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                    <h3 class="font-semibold text-green-800 mb-2">What happens next:</h3>
+                    <ul class="text-green-700 text-left space-y-1">
+                        <li>• Changes will take effect within 5-10 minutes</li>
+                        <li>• You'll receive a confirmation email</li>
+                        <li>• Account restrictions will be lifted in 24 hours</li>
+                        <li>• Contact support if you need assistance</li>
+                    </ul>
+                </div>
+                <button onclick="restartProcess()" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
+                    Start New Process
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-8">
+            <button id="prev-btn" onclick="previousStep()" class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors duration-200 hidden">
+                Previous
+            </button>
+            <div class="flex-1"></div>
+            <button id="next-btn" onclick="nextStep()" class="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
+                Next Step
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function updateUI() {
+            // Hide all steps
+            for (let i = 1; i <= totalSteps; i++) {
+                document.getElementById(`step${i}`).classList.add('hidden');
+            }
+            
+            // Show current step
+            document.getElementById(`step${currentStep}`).classList.remove('hidden');
+            
+            // Update step indicators
+            for (let i = 1; i <= totalSteps; i++) {
+                const indicator = document.getElementById(`step${i}-indicator`);
+                indicator.classList.remove('step-active', 'step-completed');
+                
+                if (i < currentStep) {
+                    indicator.classList.add('step-completed');
+                } else if (i === currentStep) {
+                    indicator.classList.add('step-active');
+                } else {
+                    indicator.classList.add('bg-gray-300');
+                }
+            }
+            
+            // Update current step display
+            document.getElementById('current-step').textContent = currentStep;
+            
+            // Update navigation buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            if (currentStep === 1) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+            }
+            
+            if (currentStep === totalSteps) {
+                nextBtn.classList.add('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                
+                // Update next button text based on step
+                if (currentStep === 4) {
+                    const checkbox = document.getElementById('confirm-checkbox');
+                    if (checkbox.checked) {
+                        nextBtn.textContent = 'Complete Process';
+                        nextBtn.disabled = false;
+                        nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    } else {
+                        nextBtn.textContent = 'Please confirm to continue';
+                        nextBtn.disabled = true;
+                        nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    }
+                } else {
+                    nextBtn.textContent = 'Next Step';
+                    nextBtn.disabled = false;
+                    nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            }
+        }
+
+        function nextStep() {
+            if (currentStep === 4) {
+                const checkbox = document.getElementById('confirm-checkbox');
+                if (!checkbox.checked) {
+                    alert('Please confirm that you understand the consequences before proceeding.');
+                    return;
+                }
+            }
+            
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateUI();
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateUI();
+            }
+        }
+
+        function restartProcess() {
+            currentStep = 1;
+            document.getElementById('userid').value = '';
+            document.getElementById('confirm-checkbox').checked = false;
+            updateUI();
+        }
+
+        // Add event listener for checkbox
+        document.getElementById('confirm-checkbox').addEventListener('change', updateUI);
+
+        // Initialize UI
+        updateUI();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'979ad4c1b59fe6d3',t:'MTc1Njk2MTA2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
